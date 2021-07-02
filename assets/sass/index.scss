@@ -1,0 +1,151 @@
+$orange:#D04F4F;
+$blue:#3282F7;
+$green:#68D9A4;
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.header {
+    margin-top: 50px;
+}
+
+.toque {
+    text-align: center;
+    .page-name {
+        color: $orange;
+    }
+}
+
+.search-bar {
+    width: 100%;
+    margin-top: 30px;
+    input {
+        width: 95%;
+        background-color: #E7E7E7;
+        height: 69px;
+        border-radius: 5px;
+        padding: 20px;
+        border: none;
+    }
+    i {
+        position: relative;
+        top: 5px;
+        right: 40px;
+        font-weight: bold;
+        font-size: 1.6em;
+    }
+}
+
+.result-search {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.search-element {
+    padding: 10px 20px;
+    margin-right: 20px;
+    color: white;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    i {
+        font-size: 1.4em;
+        margin-left: 10px;
+    }
+}
+
+.element-ingredient {
+    background-color: $blue;
+}
+
+.element-ustensils {
+    background-color: $orange;
+}
+
+.element-appareil {
+    background-color: $green;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    .dropdown-open {
+        width: 667px !important;
+        .list-dropdown {
+            display: flex !important;
+        }
+        i {
+            transform: rotate(180deg);
+        }
+    }
+    .dropdown {
+        position: relative;
+        border-radius: 5px;
+        margin-right: 15px;
+        width: 170px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: width 0.5s;
+        cursor: pointer;
+        .list-dropdown {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            display: none;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 20px;
+        }
+        .list-element {
+            color: white;
+            width: 30%;
+            padding: 5px;
+        }
+        input {
+            background-color: transparent;
+            border: none;
+            padding: 20px;
+            width: 80%;
+            color: white;
+            outline: none;
+            &::placeholder {
+                color: white;
+            }
+        }
+        i {
+            color: white;
+            padding: 0 20px;
+            transition: transform 0.5s;
+        }
+    }
+    .appareil {
+        background-color: $green;
+        .list-dropdown {
+            background-color: $green;
+        }
+    }
+    .ingredient {
+        background-color: $blue;
+        .list-dropdown {
+            background-color: $blue;
+        }
+    }
+    .ustensil {
+        background-color: $orange;
+        .list-dropdown {
+            background-color: $orange;
+        }
+    }
+}
