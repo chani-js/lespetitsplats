@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="assets/sass/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5fd0146c22.js" crossorigin="anonymous"></script>
     <title>Accueil</title>
 </head>
 
 <body>
     <section class="container">
+        <!--Header-->
         <section class="header">
             <div class="toque">
                 <img src="Vector.png" alt="Logo toque">
@@ -26,9 +26,11 @@
                 <input type="search" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette" aria-label="barre de recherche"><i class="fas fa-search"></i>
             </div>
         </section>
+        <!--Barre de recherche-->
         <section class="result-search">
 
         </section>
+        <!--Dropdown-->
         <section class="search">
             <div class="ingredient dropdown ">
 
@@ -46,12 +48,36 @@
                 </div>
             </div>
         </section>
+        <!-- carte de recette-->
         <section class="card-container ">
+            <div class="card">
+                <div class="up-card">
 
+
+                </div>
+                <div class="down-card">
+                    <div class="left-card">
+                        <div class="recipe-name">
+                            limonade coco
+                        </div>
+                        <div class="recipe-ingredient">
+                            <ul>
+                                <li>sucre:400Gr</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-card">
+                        <div class="recipe-time">
+                            10 min
+                        </div>
+                        <div class="recipe">
+                            mettre la limonade
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </section>
-
-
 
     <!--Script Js-->
     <script type="module" src="assets/Js/Main.js"></script>

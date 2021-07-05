@@ -1,11 +1,11 @@
-$orange:#D04F4F;
-$blue:#3282F7;
-$green:#68D9A4;
+$orange: #d04f4f;
+$blue: #3282f7;
+$green: #68d9a4;
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'DM Sans', sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 .container {
@@ -21,6 +21,8 @@ body {
     text-align: center;
     .page-name {
         color: $orange;
+        font-family: "DM Sans", sans-serif;
+        font-weight: 700;
     }
 }
 
@@ -29,7 +31,7 @@ body {
     margin-top: 30px;
     input {
         width: 95%;
-        background-color: #E7E7E7;
+        background-color: #e7e7e7;
         height: 69px;
         border-radius: 5px;
         padding: 20px;
@@ -79,8 +81,10 @@ body {
     display: flex;
     flex-direction: row;
     margin-top: 20px;
+    font-weight: 700;
     .dropdown-open {
         width: 667px !important;
+        z-index: 1;
         .list-dropdown {
             display: flex !important;
         }
@@ -146,6 +150,52 @@ body {
         background-color: $orange;
         .list-dropdown {
             background-color: $orange;
+        }
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin-top: 50px;
+    border-radius: 5px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-right: 45px;
+    z-index: -1;
+    .up-card {
+        background-color: #c7bebe;
+        height: 178px;
+    }
+    .down-card {
+        background-color: #e7e7e7;
+        display: flex;
+        flex-direction: row;
+        height: 186px;
+        .right-card {
+            width: 50%;
+            padding: 20px;
+        }
+        .left-card {
+            width: 50%;
+            padding: 20px;
+            .recipe-name {
+                font-weight: 400;
+            }
+            .recipe-ingredient {
+                ul {
+                    list-style: none;
+                    padding-left: 0;
+                    font-weight: 700;
+                    font-size: 0.8em;
+                }
+            }
         }
     }
 }
