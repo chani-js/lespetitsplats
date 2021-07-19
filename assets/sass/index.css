@@ -129,6 +129,8 @@ body {
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
   cursor: pointer;
+  font-weight: 400;
+  font-size: 1em;
 }
 
 .search .dropdown .list-dropdown {
@@ -252,26 +254,55 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   height: 186px;
+  overflow: hidden;
 }
 
 .card .down-card .right-card {
   width: 50%;
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card .down-card .right-card .recipe-time {
+  font-size: 21px;
+  font-weight: bold;
+  float: right;
+}
+
+.card .down-card .right-card .recipe {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.7em;
+  padding-top: 10px;
 }
 
 .card .down-card .left-card {
   width: 50%;
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .card .down-card .left-card .recipe-name {
   font-weight: 400;
+  font-size: 21px;
 }
 
 .card .down-card .left-card .recipe-ingredient ul {
   list-style: none;
   padding-left: 0;
+  padding-top: 10px;
   font-weight: 700;
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 /*# sourceMappingURL=index.css.map */

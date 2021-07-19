@@ -70,7 +70,6 @@ export default class Dropdown {
         this.element.addEventListener("click",this.handleClick.bind(this))
         input.addEventListener("input",this.handleChange.bind(this))
         const listeelement = document.getElementsByClassName(`list-element-${this.type}`)
-        console.log(listeelement)
         for(let i=0 ;i<listeelement.length;i++){
             listeelement[i].addEventListener("click", this.handleClickelement.bind(this))
         }

@@ -102,6 +102,8 @@ body {
         align-items: center;
         transition: width 0.5s;
         cursor: pointer;
+        font-weight: 400;
+        font-size: 1em;
         .list-dropdown {
             position: absolute;
             top: 40px;
@@ -178,22 +180,39 @@ body {
         display: flex;
         flex-direction: row;
         height: 186px;
+        overflow: hidden;
         .right-card {
             width: 50%;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            .recipe-time {
+                font-size: 21px;
+                font-weight: bold;
+                float: right;
+            }
+            .recipe {
+                font-family: 'Roboto', sans-serif;
+                font-size: 0.7em;
+                padding-top: 10px;
+            }
         }
         .left-card {
             width: 50%;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
             .recipe-name {
                 font-weight: 400;
+                font-size: 21px;
             }
             .recipe-ingredient {
                 ul {
                     list-style: none;
                     padding-left: 0;
+                    padding-top: 10px;
                     font-weight: 700;
-                    font-size: 0.8em;
+                    font-size: 0.7em;
                 }
             }
         }
