@@ -1,10 +1,11 @@
 export default class Dropdown {
-    constructor(datas, element, placeholder, type) {
+    constructor(datas, element, placeholder, type, event) {
         this.datas = datas
         this.element = element
         this.placeholder = placeholder
         this.type = type
         this.value = ""
+        this.event = event
     }
 
     renderlist() {
@@ -23,61 +24,61 @@ export default class Dropdown {
     }
 
     render() {
-            //.map est equivalent au foreach 
-
-            let dropdown =
-                `<input type="text" ${this.value && `value="${this.value}"`} placeholder="${this.placeholder}" class="input-${this.type}"><i class="fas fa-chevron-down"></i>
+        //.map est equivalent au foreach
+        const dropdown =
+            `<input type="text" ${this.value && `value="${this.value}"`} placeholder="${this.placeholder}" class="input-${this.type}"><i class="fas fa-chevron-down"></i>
                 <div class="list-${this.type} list-dropdown">
                    ${this.renderlist()}
                 </div>`
 
         this.element.innerHTML = dropdown
-        
-
     }
 
-    handleClickelement(e){
+    handleClickElement(e) {
         e.preventDefault()
-        let result = document.getElementsByClassName("result-search")[0]
-        let div = `<div class="element-${this.type} search-element"> ${e.target.innerHTML} <i class="far fa-times-circle"></i></div>`
+        const result = document.getElementsByClassName("result-search")[0]
+        const div = `<div class="element-${this.type} search-element">${e.target.innerHTML}<i class="far fa-times-circle result-icon"></i></div>`
         result.innerHTML += div
-
+        result.dispatchEvent(this.event);
     }
 
-    handleClick(){
+    handleClick() {
         this.element.classList.toggle("dropdown-open")
     }
 
-    handleChange(e){
-        
-        if(e.target.value.length > 2){
-            let liste = document.getElementsByClassName(`list-${this.type}`)[0]
-            this.value= e.target.value
+    handleChange(e) {
+        if (e.target.value.length > 2) {
+            const liste = document.getElementsByClassName(`list-${this.type}`)[0]
+            this.value = e.target.value
             liste.innerHTML = this.renderlist()
             console.log(e.target.value)
-            
-        }else {
-            this.value=""
-            let liste = document.getElementsByClassName(`list-${this.type}`)[0]
+        } else {
+            this.value = ""
+            const liste = document.getElementsByClassName(`list-${this.type}`)[0]
             liste.innerHTML = this.renderlist()
         }
-        
+
 
     }
-    init(){
+
+    init() {
         this.render()
         const input = document.getElementsByClassName(`input-${this.type}`)[0]
-        this.element.addEventListener("click",this.handleClick.bind(this))
-        input.addEventListener("input",this.handleChange.bind(this))
-        const listeelement = document.getElementsByClassName(`list-element-${this.type}`)
-        for(let i=0 ;i<listeelement.length;i++){
-            listeelement[i].addEventListener("click", this.handleClickelement.bind(this))
+        this.element.addEventListener("click", this.handleClick.bind(this))
+        input.addEventListener("input", this.handleChange.bind(this))
+        const listeElement = document.getElementsByClassName(`list-element-${this.type}`)
+        for (let i = 0; i < listeElement.length; i++) {
+            listeElement[i].addEventListener("click", this.handleClickElement.bind(this))
         }
-        
-
-
     }
 
-
-
+    update(recipes) {
+        this.datas = recipes
+        const list = document.getElementsByClassName(`list-${this.type}`)[0]
+        list.innerHTML = this.renderlist()
+        const listeElement = document.getElementsByClassName(`list-element-${this.type}`)
+        for (let i = 0; i < listeElement.length; i++) {
+            listeElement[i].addEventListener("click", this.handleClickElement.bind(this))
+        }
+    }
 }

@@ -47,6 +47,10 @@ body {
   font-size: 1.6em;
 }
 
+.icon-search-hide {
+  display: none !important;
+}
+
 .result-search {
   display: -webkit-box;
   display: -ms-flexbox;
