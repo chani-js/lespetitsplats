@@ -1,10 +1,11 @@
 import { recipesMock } from "../Json/mock.js";
-import { getAppareils, getIngredients, getUstensils, getRecipes, linearSearch, getFiltersResults, filterRecipes } from "./Helpers.js";
+import { getAppareils, getIngredients, getUstensils, getRecipes, linearSearch, getFiltersResults, filterRecipes, filterSearch } from "./Helpers.js";
 import Dropdown from "./dropdown.js";
 import Recipes from "./recipes.js";
 
 
-document.addEventListener("DOMContentLoaded", function (event) {
+
+document.addEventListener("DOMContentLoaded", function(event) {
     const changeFilters = new Event('changeFilters');
     let recipesFiltered = recipesMock;
 
@@ -37,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         document.getElementsByClassName("fa-search")[0].classList.add('icon-search-hide')
         if (e.target.value.length > 3) {
             recipesFiltered = linearSearch(recipes, e.target.value)
+                //recipesFiltered = filterSearch(recipes, e.target.value)
             listRecipes.update(recipesFiltered)
             dropdownIngredients.update(getIngredients(recipesFiltered))
             dropdownUstensils.update(getUstensils(recipesFiltered))
@@ -47,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // trigger when clear the input when click on X
     search.addEventListener('search', () => {
         recipesFiltered = linearSearch(recipes, '')
+            //recipesFiltered.filterSearch(recipes, '')
         listRecipes.update(recipesFiltered)
         dropdownIngredients.update(getIngredients(recipesFiltered))
         dropdownUstensils.update(getUstensils(recipesFiltered))
@@ -66,6 +69,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
         const filters = getFiltersResults(result.children)
         recipesFiltered = filterRecipes(filters, recipesFiltered.length > 0 ? recipesFiltered : recipes)
         listRecipes.update(recipesFiltered)
+        dropdownIngredients.update(getIngredients(recipesFiltered))
+        dropdownUstensils.update(getUstensils(recipesFiltered))
+        dropdownAppareils.update(getAppareils(recipesFiltered))
     }, false);
 
 });
