@@ -8,6 +8,9 @@ export default class Dropdown {
         this.event = event
     }
 
+    /*  parcourir le tableau de dropdown affiché et remove ou update les drpdown ainsi que
+    l'affihage des recettes*/
+
     renderlist() {
         //[...this.datas] clone de this.data
         let filtereddata = [...this.datas]
@@ -24,9 +27,9 @@ export default class Dropdown {
     }
 
     render() {
-        //.map est equivalent au foreach
-        const dropdown =
-            `<input type="text" ${this.value && `value="${this.value}"`} placeholder="${this.placeholder}" class="input-${this.type}"><i class="fas fa-chevron-down"></i>
+            //.map est equivalent au foreach
+            const dropdown =
+                `<input type="text" ${this.value && `value="${this.value}"`} placeholder="${this.placeholder}" class="input-${this.type}"><i class="fas fa-chevron-down"></i>
                 <div class="list-${this.type} list-dropdown">
                    ${this.renderlist()}
                 </div>`

@@ -56,13 +56,7 @@ export const linearSearch = (recipes, key) => {
                 case recipes[i].description.toLowerCase().includes(key.toLowerCase()):
                     newRecipes.push(recipes[i])
                     break;
-                    /*
-                                    case recipes[i].appliance.includes(key.toLowerCase()):
-                                        newRecipes.push(recipes[i])
-                                        break;
-                                    case recipes[i].ustensils.includes(key.toLowerCase()):
-                                        newRecipes.push(recipes[i])
-                                        break;*/
+
                 case isInIngredients(recipes[i].ingredients, key):
                     newRecipes.push(recipes[i])
                     break;
@@ -101,6 +95,7 @@ export const getFiltersResults = (results) => {
 }
 
 export const filterRecipes = (filters, recipes) => {
+    console.log(filters.ustensils.length, filters.ingredients.length, filters.appliance.length)
     if (filters.ustensils.length === 0 && filters.ingredients.length === 0 && filters.appliance.length === 0) {
         return recipesMock
     }
@@ -115,13 +110,16 @@ export const filterRecipes = (filters, recipes) => {
                     if (isInIngredients(recipes[k].ingredients, filters[filtersKey[i]][j]) && !isInRecipes(filteredRecipes, recipes[k]))
                         filteredRecipes.push(recipes[k])
                 } else if (filtersKey[i] === "ustensils") {
-                    if (recipes[k].ustensils.includes(filters[filtersKey[i]][j]) && !isInRecipes(filteredRecipes, recipes[k]))
+                    if (recipes[k].ustensils.includes(filters[filtersKey[i]][j]) && !isInRecipes(filteredRecipes, recipes[k])) {
+                        filteredRecipes.filter((item) => item.ustensils.includes(filters[filtersKey[i]][j]))
                         filteredRecipes.push(recipes[k])
+                    }
                 } else if (filtersKey[i] === "appliance") {
-                    if (recipes[k].appliance.includes(filters[filtersKey[i]][j]) && !isInRecipes(filteredRecipes, recipes[k]))
+                    if (recipes[k].appliance.includes(filters[filtersKey[i]][j]) && !isInRecipes(filteredRecipes, recipes[k])) {
+                        filteredRecipes = filteredRecipes.filter((item) => item.appliance.includes(filters[filtersKey[i]][j]))
                         filteredRecipes.push(recipes[k])
+                    }
                 }
-
             }
         }
     }
