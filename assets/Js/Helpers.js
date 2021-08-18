@@ -124,7 +124,8 @@ export const filterRecipes = (filters, recipes) => {
     }
     return filteredRecipes;
 };
-
+/* parcourir le tableau d e recette et ensuite verifier les conditions et y faire les push selon les tags
+pour chaque recette verifier les ingredients ustensiles et appareil et ensuite faire les push  */
 const isInRecipes = (recipes, key) => {
     let isIn = false;
     for (let i = 0; i < recipes.length; i++) {
