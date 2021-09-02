@@ -67,9 +67,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
             .getElementsByClassName("fa-search")[0]
             .classList.add("icon-search-hide");
         if (e.target.value.length > 2) {
-            recipesFiltered = linearSearch(recipes, e.target.value);
+            //recipesFiltered = linearSearch(recipes, e.target.value);
             console.log("tata");
-            //recipesFiltered = filterSearch(recipes, e.target.value)
+            recipesFiltered = filterSearch(recipes, e.target.value)
             listRecipes.update(recipesFiltered);
             dropdownIngredients.update(getIngredients(recipesFiltered));
             dropdownUstensils.update(getUstensils(recipesFiltered));
@@ -79,9 +79,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // trigger when clear the input when click on X
     search.addEventListener("search", () => {
-        recipesFiltered = linearSearch(recipes, "");
+        //recipesFiltered = linearSearch(recipes, "");
         console.log("titi");
-        //recipesFiltered.filterSearch(recipes, '')
+        recipesFiltered.filterSearch(recipes, '')
         listRecipes.update(recipesFiltered);
         // update des dropdown
         dropdownIngredients.update(getIngredients(recipesFiltered));
