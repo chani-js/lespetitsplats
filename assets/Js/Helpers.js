@@ -23,6 +23,10 @@ export const getUstensils = (recipes) => {
     return ustensiles;
 };
 
+export const getRecipes = (recipes) => {
+    return recipes;
+};
+
 export const getAppareils = (recipes) => {
     const appareils = [];
     recipes.forEach((element) => {
@@ -32,9 +36,7 @@ export const getAppareils = (recipes) => {
     return appareils;
 };
 
-export const getRecipes = (recipes) => {
-    return recipes;
-};
+
 
 // algo de recherche lineaire avec le . includes
 export const linearSearch = (recipes, key) => {
