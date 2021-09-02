@@ -47,6 +47,7 @@ export const linearSearch = (recipes, key) => {
             switch (true) {
                 // La méthode includes() permet de déterminer si un tableau contient une valeur et renvoie true si c'est le cas, false sinon.
                 case recipes[i].name.toLowerCase().includes(key.toLowerCase()):
+                    console.log("toto")
                     newRecipes.push(recipes[i]);
                     // push les recette dans un tableau selon le nom de la recette
                     break;

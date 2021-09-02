@@ -36,9 +36,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const search = document.getElementById("search")
     search.addEventListener('input', (e) => {
         document.getElementsByClassName("fa-search")[0].classList.add('icon-search-hide')
-        if (e.target.value.length > 3) {
+        if (e.target.value.length >= 3) {
             //recipesFiltered = linearSearch(recipes, e.target.value)
-            //console.log(("tata"))
+            console.log(("tata"))
             recipesFiltered = filterSearch(recipes, e.target.value)
             listRecipes.update(recipesFiltered)
             dropdownIngredients.update(getIngredients(recipesFiltered))
@@ -49,10 +49,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // trigger when clear the input when click on X
     search.addEventListener('search', () => {
-        //recipesFiltered = linearSearch(recipes, '')
-        //console.log("toto")
+        recipesFiltered = linearSearch(recipes, '')
+        console.log("titi")
         recipesFiltered.filterSearch(recipes, '')
-        listRecipes.update(recipesFiltered)
+            // listRecipes.update(recipesFiltered)
             // update des dropdown
         dropdownIngredients.update(getIngredients(recipesFiltered))
         dropdownUstensils.update(getUstensils(recipesFiltered))
