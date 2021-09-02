@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         document
             .getElementsByClassName("fa-search")[0]
             .classList.add("icon-search-hide");
-        if (e.target.value.length > 3) {
+        if (e.target.value.length >= 3) {
             recipesFiltered = linearSearch(recipes, e.target.value);
             console.log("tata");
             //recipesFiltered = filterSearch(recipes, e.target.value)
