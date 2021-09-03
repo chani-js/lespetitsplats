@@ -108,7 +108,6 @@ export const filterRecipes = (filters, recipes) => {
     } else {
         recipesMock.forEach((item) => {
             let KeepRecipe = true;
-            console.log(item);
             filters.ustensils.forEach((ustensil) => {
                 if (!item.ustensils.includes(ustensil)) KeepRecipe = false;
             });
