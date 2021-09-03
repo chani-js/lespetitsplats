@@ -39,7 +39,7 @@ export default class Recipes {
     }
 
     render() {
-        const listRecipes = this.datas.map((recipe) => this.renderCardRecipe(recipe))
+        const listRecipes = this.datas.map((recipe) => this.renderCardRecipe(recipe)).join("")
         this.element.innerHTML = listRecipes
     }
     init() {
@@ -48,7 +48,7 @@ export default class Recipes {
     update(newRecipes) {
         this.element.innerHTML = ''
         if (newRecipes.length > 0) {
-            const listRecipes = newRecipes.map((recipe) => this.renderCardRecipe(recipe))
+            const listRecipes = newRecipes.map((recipe) => this.renderCardRecipe(recipe)).join("")
             this.element.innerHTML = listRecipes
         } else {
             this.element.innerHTML = 'No Results'

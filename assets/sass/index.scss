@@ -173,13 +173,13 @@ body {
     z-index: -1;
     .up-card {
         background-color: #c7bebe;
-        height: 178px;
+        height: 280px;
     }
     .down-card {
         background-color: #e7e7e7;
         display: flex;
         flex-direction: row;
-        height: 186px;
+        height: 280px;
         overflow: hidden;
         .right-card {
             width: 50%;
@@ -204,7 +204,7 @@ body {
             flex-direction: column;
             .recipe-name {
                 font-weight: 400;
-                font-size: 21px;
+                font-size: 18px;
             }
             .recipe-ingredient {
                 ul {
