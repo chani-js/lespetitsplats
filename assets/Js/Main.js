@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         changeFilters
     );
     dropdownIngredients.init();
-    console.log("ingredients ==>", ingredients);
 
     // make Dropdown Ustensils
     const ustensiles = getUstensils(recipesMock);
@@ -46,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         changeFilters
     );
     dropdownUstensils.init();
-    console.log("ustensiles ==>", ustensiles);
 
     // make Dropdown Appareils
     const appareil = getAppareils(recipesMock);
@@ -58,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         changeFilters
     );
     dropdownAppareils.init();
-    console.log("appareil ==>", appareil);
 
     // Listen search Input
     const search = document.getElementById("search");
@@ -68,7 +65,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
             .classList.add("icon-search-hide");
         if (e.target.value.length > 2) {
             //recipesFiltered = linearSearch(recipes, e.target.value);
-            console.log("tata");
             recipesFiltered = filterSearch(recipes, e.target.value)
             listRecipes.update(recipesFiltered);
             dropdownIngredients.update(getIngredients(recipesFiltered));
@@ -80,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // trigger when clear the input when click on X
     search.addEventListener("search", () => {
         //recipesFiltered = linearSearch(recipes, "");
-        console.log("titi");
         recipesFiltered.filterSearch(recipes, '')
         listRecipes.update(recipesFiltered);
         // update des dropdown

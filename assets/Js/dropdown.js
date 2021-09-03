@@ -60,7 +60,6 @@ export default class Dropdown {
       const liste = document.getElementsByClassName(`list-${this.type}`)[0];
       this.value = e.target.value;
       liste.innerHTML = this.renderlist();
-      console.log(e.target.value);
     } else {
       this.value = "";
       const liste = document.getElementsByClassName(`list-${this.type}`)[0];
