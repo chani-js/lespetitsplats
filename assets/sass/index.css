@@ -1,314 +1,308 @@
 body {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Lato", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
 }
 
 .container {
-    width: 90%;
-    margin: auto;
+  width: 90%;
+  margin: auto;
 }
 
 .header {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .toque {
-    text-align: center;
+  text-align: center;
 }
 
 .toque .page-name {
-    color: #d04f4f;
-    font-family: "DM Sans", sans-serif;
-    font-weight: 700;
+  color: #d04f4f;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
 }
 
 .search-bar {
-    width: 100%;
-    margin-top: 30px;
+  width: 100%;
+  margin-top: 30px;
 }
 
 .search-bar input {
-    width: 95%;
-    background-color: #e7e7e7;
-    height: 69px;
-    border-radius: 5px;
-    padding: 20px;
-    border: none;
+  width: 95%;
+  background-color: #e7e7e7;
+  height: 69px;
+  border-radius: 5px;
+  padding: 20px;
+  border: none;
 }
 
 .search-bar i {
-    position: relative;
-    top: 5px;
-    right: 40px;
-    font-weight: bold;
-    font-size: 1.6em;
-}
-
-.icon-search-hide {
-    display: none !important;
+  position: relative;
+  top: 5px;
+  right: 40px;
+  font-weight: bold;
+  font-size: 1.6em;
 }
 
 .result-search {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 20px;
 }
 
 .search-element {
-    padding: 10px 20px;
-    margin-right: 20px;
-    color: white;
-    border-radius: 5px;
-    font-size: 0.9em;
-    cursor: pointer;
+  padding: 10px 20px;
+  margin-right: 20px;
+  color: white;
+  border-radius: 5px;
+  font-size: 0.9em;
+  cursor: pointer;
 }
 
 .search-element i {
-    font-size: 1.4em;
-    margin-left: 10px;
+  font-size: 1.4em;
+  margin-left: 10px;
 }
 
 .element-ingredient {
-    background-color: #3282f7;
+  background-color: #3282f7;
 }
 
 .element-ustensils {
-    background-color: #d04f4f;
+  background-color: #d04f4f;
 }
 
 .element-appareil {
-    background-color: #68d9a4;
+  background-color: #68d9a4;
 }
 
 .search {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    margin-top: 20px;
-    font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 20px;
+  font-weight: 700;
 }
 
 .search .dropdown-open {
-    width: 667px !important;
-    z-index: 1;
+  width: 667px !important;
+  z-index: 1;
 }
 
 .search .dropdown-open .list-dropdown {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .search .dropdown-open i {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .search .dropdown {
-    position: relative;
-    border-radius: 5px;
-    margin-right: 15px;
-    width: 170px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-transition: width 0.5s;
-    transition: width 0.5s;
-    cursor: pointer;
-    font-weight: 400;
-    font-size: 1em;
+  position: relative;
+  border-radius: 5px;
+  margin-right: 15px;
+  width: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1em;
 }
 
 .search .dropdown .list-dropdown {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    display: none;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 20px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  padding: 20px;
 }
 
 .search .dropdown .list-element {
-    color: white;
-    width: 30%;
-    padding: 5px;
+  color: white;
+  width: 30%;
+  padding: 5px;
 }
 
 .search .dropdown input {
-    background-color: transparent;
-    border: none;
-    padding: 20px;
-    width: 80%;
-    color: white;
-    outline: none;
+  background-color: transparent;
+  border: none;
+  padding: 20px;
+  width: 80%;
+  color: white;
+  outline: none;
 }
 
 .search .dropdown input::-webkit-input-placeholder {
-    color: white;
+  color: white;
 }
 
 .search .dropdown input:-ms-input-placeholder {
-    color: white;
+  color: white;
 }
 
 .search .dropdown input::-ms-input-placeholder {
-    color: white;
+  color: white;
 }
 
 .search .dropdown input::placeholder {
-    color: white;
+  color: white;
 }
 
 .search .dropdown i {
-    color: white;
-    padding: 0 20px;
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
-    transition: transform 0.5s, -webkit-transform 0.5s;
+  color: white;
+  padding: 0 20px;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .search .appareil {
-    background-color: #68d9a4;
+  background-color: #68d9a4;
 }
 
 .search .appareil .list-dropdown {
-    background-color: #68d9a4;
+  background-color: #68d9a4;
 }
 
 .search .ingredient {
-    background-color: #3282f7;
+  background-color: #3282f7;
 }
 
 .search .ingredient .list-dropdown {
-    background-color: #3282f7;
+  background-color: #3282f7;
 }
 
 .search .ustensil {
-    background-color: #d04f4f;
+  background-color: #d04f4f;
 }
 
 .search .ustensil .list-dropdown {
-    background-color: #d04f4f;
+  background-color: #d04f4f;
 }
 
 .card-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .card {
-    margin-top: 50px;
-    border-radius: 5px;
-    width: 380px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    height: auto;
-    margin-right: 45px;
-    z-index: -1;
+  margin-top: 50px;
+  border-radius: 5px;
+  width: 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  margin-right: 45px;
+  z-index: -1;
 }
 
 .card .up-card {
-    background-color: #c7bebe;
-    height: 178px;
+  background-color: #c7bebe;
+  height: 280px;
 }
 
 .card .down-card {
-    background-color: #e7e7e7;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    height: 186px;
-    overflow: hidden;
+  background-color: #e7e7e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 280px;
+  overflow: hidden;
 }
 
 .card .down-card .right-card {
-    width: 50%;
-    padding: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+  width: 50%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .card .down-card .right-card .recipe-time {
-    font-size: 21px;
-    font-weight: bold;
-    float: right;
+  font-size: 21px;
+  font-weight: bold;
+  float: right;
 }
 
 .card .down-card .right-card .recipe {
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.7em;
-    padding-top: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.7em;
+  padding-top: 10px;
 }
 
 .card .down-card .left-card {
-    width: 50%;
-    padding: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+  width: 50%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .card .down-card .left-card .recipe-name {
-    font-weight: 400;
-    font-size: 21px;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .card .down-card .left-card .recipe-ingredient ul {
-    list-style: none;
-    padding-left: 0;
-    padding-top: 10px;
-    font-weight: 700;
-    font-size: 0.7em;
+  list-style: none;
+  padding-left: 0;
+  padding-top: 10px;
+  font-weight: 700;
+  font-size: 0.7em;
 }
-
-
 /*# sourceMappingURL=index.css.map */
